@@ -1,19 +1,22 @@
 import openai
 
-# Set your OpenAI API key
-openai.api_key = 'your-api-key'
+# Step 1: Set your OpenAI API key
+openai.api_key = 'your-openai-api-key-here'
 
-# Function to make a simple API call and get the response
+# Step 2: Define a function to call OpenAI API
 def get_openai_response(prompt):
     response = openai.Completion.create(
-        engine="text-davinci-003",  # You can choose other engines
+        engine="text-davinci-003",
         prompt=prompt,
         max_tokens=100,
-        temperature=0.5  # Controls creativity of the response
+        temperature=0.5,
+        n=1,
+        stop=None
     )
-    # Access the first choice and strip the result of extra spaces
     return response.choices[0].text.strip()
 
-# Example prompt
-prompt = "Explain the benefits of using solar energy."
-print(get_openai_response(prompt))
+# Step 3: Call the function with a prompt and print the result
+if __name__ == "__main__":
+    user_prompt = "Explain how a neural network works in simple terms."
+    openai_response = get_openai_response(user_prompt)
+    print(f"Response from OpenAI:\n{openai_response}")
