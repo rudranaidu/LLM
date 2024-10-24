@@ -20,3 +20,6 @@ if __name__ == "__main__":
     user_prompt = "Explain how a neural network works in simple terms."
     openai_response = get_openai_response(user_prompt)
     print(f"Response from OpenAI:\n{openai_response}")
+
+
+if you want the flexibility to use the script both as a standalone and as a module in other projects use the block if __name__ == "__main__":
