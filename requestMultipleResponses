@@ -1,0 +1,24 @@
+import openai
+
+# Set your OpenAI API key
+openai.api_key = 'your-api-key'
+
+# Function to get multiple responses
+def get_multiple_responses(prompt, n):
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=prompt,
+        max_tokens=100,
+        temperature=0.5,
+        n=n  # Number of responses to generate
+    )
+    # Return all the choices (responses)
+    return [choice.text.strip() for choice in response.choices]
+
+# Example prompt
+prompt = "What are the benefits of exercising regularly?"
+responses = get_multiple_responses(prompt, 3)
+
+# Print each response
+for i, res in enumerate(responses):
+    print(f"Response {i+1}:\n{res}\n")
