@@ -1,0 +1,5 @@
+Models (Engines):
+text-davinci-003: Best for complex, creative tasks (e.g., story writing, deep explanations).
+text-curie-001: Good balance between speed and quality for general tasks.
+text-babbage-001: Fast and good for simple tasks (e.g., classification).
+text-ada-001: Fastest and cheapest, best for very simple or basic tasks.
