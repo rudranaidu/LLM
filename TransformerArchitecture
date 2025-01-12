@@ -47,7 +47,35 @@ Feedforward Network
 Multi-Head Attention
 
 How Attention Works (QKV)
+
+How Attention Works (Explained for Beginners)
+Imagine you’re reading a book, and you want to understand a sentence. To fully grasp its meaning, you don’t just focus on one word at
+a time—you think about how words relate to each other. That’s exactly what attention does in a machine learning model: it helps the model 
+figure out which words in a sentence (or parts of input data) are most important when understanding or predicting something.
+
+Let’s break it down step by step:
 Every vector in the transformer contains three components:
+
+1. The Problem Attention Solves
+When processing sentences, not all words are equally important. For example:
+
+"I saw the dog by the river." If you're trying to figure out what "river" means, the word "by" is more relevant than "dog."
+Attention helps the model focus on the right words at the right time to get the correct meaning.
+
+2. Key Idea: Weighted Focus
+Attention assigns different weights to words based on how important they are to understanding the current word. Words with higher weights get more focus.
+
+Example: If the sentence is:
+"She gave the book to John because he loves reading,"
+and you’re trying to predict "he," attention will focus more on "John" than "book" because "he" refers to "John."
+
+3. How Attention Works (The Q, K, V Process)
+Every word in a sentence is represented as a numerical vector. Attention uses three types of vectors for each word:
+
+Query (Q): Represents the current word asking, "What am I looking for?"
+Key (K): Represents other words answering, "What do I have to offer?"
+Value (V): Represents the actual information of those words.
+The Query compares itself with all the Keys in the sentence to see how much each word is related to the current word. The result is used to decide how much of each Value to focus on.
 
 Query (Q) – Represents the current word.
 Key (K) – Represents related words.
