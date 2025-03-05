@@ -1,0 +1,27 @@
+1. PDF Parsing Optimization
+Use a structured parser: Since your PDFs contain both text and tables, ensure that PDFPlumber extracts tables correctly and maintains associations between columns.
+Extract hyperlinks: Identify hyperlinks in your PDFs and store them separately for easy retrieval.
+Normalize extracted data: Convert extracted tables into structured JSON format for better indexing.
+
+2. Data Organization & Storage
+Column Linking: Ensure that when one column (e.g., bug number) is queried, the pipeline retrieves all relevant columns (workarounds, JCs, hyperlinks).
+Metadata tagging: Use additional metadata like column headers, keywords, and embeddings to improve search quality in ChromaDB.
+
+3. Vector Database Enhancements
+Chunking Strategy: Optimize how text and tables are chunked. Try:
+Storing each table row as a single document.
+Keeping text-based explanations together.
+Using overlapping chunks to preserve context.
+Embeddings & Indexing:
+Experiment with different embedding models to improve similarity search.
+Use hierarchical indexing (text, tables, metadata) to enable better retrieval.
+
+4. Prompt Optimization
+System Prompt Refinement: Ensure the system prompt clearly instructs the LLM to focus only on retrieved results.
+Dynamic Prompting: Modify the query dynamically based on user intent (e.g., if the query is about a bug number, the system should retrieve the full row).
+Query Expansion: Rephrase or enrich user queries to improve retrieval.
+                                                                      
+5. LLM Response Control
+Filter Irrelevant Answers: Post-process LLM responses to ensure only relevant information is returned.
+RAG Evaluation Metrics: Implement a feedback loop where incorrect answers are analyzed, and retrieval logic is adjusted accordingly.
+Fine-tuning Considerations: If accuracy does not improve significantly, consider fine-tuning the LLM on your dataset.
