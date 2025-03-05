@@ -1,0 +1,31 @@
+Open-Source RAG Evaluation Libraries
+1️⃣ RAGAS 🚀
+✅ Open-source (GitHub Repo)
+
+Provides LLM-based metrics to evaluate retrieval relevance, answer correctness, and faithfulness.
+Helps detect hallucinations in RAG-based models.
+Built on Hugging Face, supports integration with LangChain.
+2️⃣ DeepEval 🔍
+✅ Open-source (GitHub Repo)
+
+Unit testing framework for LLMs and RAG-based pipelines.
+Includes predefined evaluation metrics like accuracy, coherence, and faithfulness.
+Works with LangChain, OpenAI, and Hugging Face models.
+3️⃣ TruLens 📊
+✅ Open-source (GitHub Repo)
+
+Provides real-time tracing and evaluation for LLM applications.
+Evaluates retrieval relevance, response quality, and hallucination risks.
+Integrates with LangChain, OpenAI, and vector databases.
+4️⃣ Uptrain 📈
+✅ Open-source (GitHub Repo)
+
+Focuses on observability, monitoring, and debugging of LLM-based apps.
+Provides custom evaluation metrics and anomaly detection.
+Supports drift detection and continuous monitoring.
+5️⃣ ARES (Automated Retrieval Evaluation System) 🛠️
+✅ Open-source (GitHub Repo)
+
+Measures retrieval precision, recall, and ranking quality.
+Uses semantic similarity for document retrieval evaluation.
+Designed for improving vector search strategies.
