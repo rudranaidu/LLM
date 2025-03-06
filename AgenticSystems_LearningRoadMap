@@ -1,0 +1,19 @@
+Here is the roadmap for complete beginner's to learn AI Agents.
+
+- Python language
+- Generative AI basics
+- LLM basics
+- Prompting techniques
+- Agent concepts
+- Agent patterns
+- Learn agent frameworks (CrewAI or Phidata)
+- Build single-agent systems
+- Build multi-agent systems
+- Build agent apps
+- RAG basics
+- Agentic RAG
+- Learn agent frameworks (AutoGen or LangGraph)
+- Build advanced agent apps
+- Learn agent evaluation and monitoring
+- Learn agent app deployment
+
