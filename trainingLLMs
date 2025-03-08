@@ -1,0 +1,104 @@
+Training Large Language Models (LLMs)
+
+1. Sequencing-Based Models vs. Transformers
+    Sequencing-Based Models:
+    Traditional models process text sequentially (word by word or character by character), leading to inefficiencies.
+    Examples: Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTMs), and Gated Recurrent Units (GRUs).
+    Limitations: Struggle with long-range dependencies, slow training, and poor parallelization.
+Transformers:
+    Use self-attention mechanisms to process text in parallel rather than sequentially.
+    Examples: BERT, GPT, T5.
+    Benefits: Better capture of long-range dependencies, more efficient training, and scalability.
+
+2. Training LLMs
+Training an LLM involves multiple stages:
+
+    A. Data Sampling:
+        Data Preparation & Sampling:
+        Collect, clean, and preprocess large datasets.
+        Ensure diversity (books, articles, conversations, code, etc.).
+        Handle imbalanced datasets.
+        Model Architecture Implementation:
+        Implement attention mechanisms (self-attention, cross-attention, etc.).
+        Define transformer layers, embeddings, and optimizers.
+    B. Pretraining:
+        Definition: Pretraining is a foundational step where the model learns general language patterns from a massive corpus.
+        
+        Gains understanding of grammar, syntax, semantics, factual knowledge, and reasoning.
+        Training Loop: Input data is fed in batches. Model predicts missing or future tokens based on context.
+        
+        Loss function (e.g., cross-entropy) is minimized.
+        
+        Model Evaluation:
+        Perplexity, loss curves, accuracy on masked token prediction. Compare against benchmarks.
+        Loading Pretrained Weights: Models can reuse previously trained weights for faster adaptation.
+
+3. Pretraining Methodologies
+    A. Masked Language Model (MLM) :Also called Autoencoding. Used in BERT.
+        15% of tokens in the input are randomly masked, and the model predicts them.
+        Why MLM? Helps learn bidirectional context (before and after a word). Produces high-quality contextual embeddings.
+    B. Causal Language Model (CLM) :Also called Autoregressive Model. Used in GPT. Predicts the next token based on previous tokens (left-to-right modeling).
+        Why CLM? Ideal for text generation and completion tasks. Learns fluent sentence formation.
+    C. Sequence-to-Sequence (Seq2Seq) Model : Also called Encoder-Decoder Model. Used in models like T5 and BART. Useful for tasks like translation, summarization, and text generation.
+
+4. Types of Models
+    A. Encoder-Only Models , Example: BERT. Best for understanding tasks (e.g., classification, question answering).
+    B. Decoder-Only Models Example: GPT. Best for generation tasks (e.g., text completion, chatbots).
+    C. Encoder-Decoder Models Example: T5, BART. Best for transformation tasks (e.g., translation, summarization).
+5. Tokenization
+    Types of Tokenization:
+        Character-Level: Each character is a token.
+        Word-Based: Each word is a token.
+        Subword Tokenization: Words are broken into smaller meaningful units.
+        Example: "playing" → "play" + "ing", "raining" → "rain" + "ing".
+6. Fine-Tuning LLMs
+    Definition:
+        Fine-tuning adapts a pretrained LLM for specific tasks.
+        Model responses become more relevant to a domain.
+    Types of Fine-Tuning:
+        Feature Extraction (Encoder-Only Models like BERT): Extract meaningful features from text for downstream tasks.
+        Updating Weights: Adjust model parameters on a new dataset to learn new information.
+        Freezing Weights: Keep some layers frozen and update only task-specific layers.
+        Few-Shot Learning: Model adapts by being given only a few examples at inference time. Helps in understanding context quickly without full retraining.
+    
+
+7. Fine-Tuning Best Practices
+    Pretrained Model Size: Choose based on computational resources.
+    Task Domain: Use relevant datasets for adaptation.
+    Pretraining Dataset Domains: Ensure alignment with the fine-tuning objective.
+   
+   Disadvantages of Fine-Tuning:
+    Overfitting: Model becomes too specialized in the fine-tuning dataset.
+    Catastrophic Forgetting: Model loses knowledge learned in pretraining.
+
+8. LoRA (Low-Rank Adaptation)
+    Reduces the number of trainable parameters. Makes fine-tuning efficient for large models.
+
+9. Reinforcement Learning from Human Feedback (RLHF) : Uses human feedback to improve generated text. Feedback is treated as a loss function to optimize performance.
+
+10. Learning Approaches
+    A. Supervised Learning: Learns from labeled examples. Maps inputs to correct outputs.
+        Example: Sentiment classification.
+    B. Reinforcement Learning: Learns through interactions with an environment.Uses rewards to guide learning.
+        Example: AI playing games like Chess or Go.
+    C. Unsupervised Learning: Learns patterns from unlabeled data.
+        Example: Clustering similar documents.
+
+
+What is the meaning of “Transfer Learning?
+ Pretrained model knowledge is transferred to the new model by assigning the same wieghts to the new model as pretrained model
+ 
+Large language models are harder to train as number of trainable parameters are larger due to more encoder and decoder blocks
+Large language models have a large number of parameters which then implies that
+the model needs to update through them in back propagation.This process is computantionally expensive
+
+
+DistilBert tokenizer?
+ It compacts the vocabulary and handle missing tokens problem
+ 
+RoBERTa (Robustly Optimized BERT Pretraining Approach)?
+
+Fine Tuned Language Net:
+
+what is the advantages of subword algorithm like BPE or WordPiece
+ 
