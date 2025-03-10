@@ -1,0 +1,45 @@
+9 Ways NOT to Use LLMs (And What to Do Instead) 
+
+Most teams are making these critical mistakes when using LLMs—wasting money, getting unreliable outputs, and frustrating users. 
+
+Don't let your AI-powered system fall into the same traps. 
+
+Here’s what to avoid and how to fix it: 
+
+1. Overusing Zero-Shot Prompts 
+ ↳ Expecting perfect results from vague, contextless prompts leads to inconsistent, low-quality outputs. 
+ ↳ Instead: Use few-shot prompting—provide clear examples to guide the model’s reasoning. 
+
+2. Monolithic Prompting 
+ ↳ Stuffing multiple complex tasks into a single overloaded prompt leads to confusion and incoherence. 
+ ↳ Instead: Break tasks into logical sub-prompts to improve structure and clarity. 
+
+3. Treating LLMs as Reliable Databases 
+ ↳ LLMs don’t store facts—they generate responses based on probability. This leads to hallucinations and incorrect factual outputs. 
+ ↳ Instead: Integrate external data sources (RAG, APIs, databases) for factual accuracy. 
+
+4. Ignoring Latency
+ ↳ If responses take too long without UI/UX feedback, users assume the system is broken and abandon the interaction. 
+ ↳ Instead: Optimize retrieval, cache frequent results, and use loading indicators or streaming to keep users engaged. 
+
+5. Overkill with Big Models 
+ ↳ Using large, expensive models for trivial tasks leads to unnecessary cost & latency. 
+ ↳ Instead: Use smaller, optimized models for simple queries and escalate only when needed. 
+
+6. Misusing Temperature & Model Parameters 
+ ↳ Setting temperature too high makes outputs random & inconsistent, while wrong token limits cut off responses. 
+ ↳ Instead: Fine-tune parameters based on task needs—lower temperature for accuracy, higher for creativity. 
+
+7. No Guardrails (Ignoring Safety) 
+ ↳ Deploying without moderation, safety constraints, or prompt filtering leads to uncontrolled, risky outputs. 
+ ↳ Instead: Implement moderation APIs, system prompts, and safety audits to enforce boundaries. 
+
+8. Ignoring Feedback & Evaluation Loops 
+ ↳ No feedback = no improvement. If you’re not capturing user feedback or tracking model performance, responses degrade over time. 
+ ↳ Instead: Implement rating systems, correction mechanisms, and prompt evaluation metrics for continuous refinement. 
+
+9. Expecting LLMs to Replace Logic 
+ ↳ LLMs are not deterministic—they struggle with precise arithmetic, filtering, and complex logic. 
+ ↳ Instead: Pair LLMs with explicit logic systems (backend rules, structured workflows, deterministic processing). 
+
+Most AI failures don’t happen because the model is bad—they happen because of poor design choices.
