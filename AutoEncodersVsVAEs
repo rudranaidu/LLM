@@ -1,0 +1,69 @@
+AutoEncoders:
+ 
+ The term "auto" in autoencoder comes from the fact that the network is trained to automatically learn to encode and decode the input without needing labels.
+
+📌 It’s unsupervised learning — the network teaches itself by:
+
+Taking the input,
+
+Trying to compress (encode) it,
+
+And then reconstruct (decode) it back to the original.
+
+So, it’s automatically learning representations of the data just by seeing it.
+
+You're not telling the model "this is a cat" — you're just saying "here’s an image, now learn to compress and rebuild it."
+The loss function says: “Hey, your reconstructed version should be as close as possible to the original.”
+
+Direct use in modern LLMs like GPT?
+Not really — models like GPT-3/4, Mistral, or LLaMA don’t directly use autoencoders in their core architecture.
+
+Some academic models blend Transformers + VAEs, especially in controlled generation, latent space manipulation, and variational sequence models.
+
+
+VAEs
+ 
+ VAEs are used to generate different versions of same text or same image or same voice
+
+ What is Latent space in VAEs?
+
+  lets say you want to describe characterstics of Pizza
+  the you can plot a 2D Graph to describe characterstics like spicy and cheese
+  
+  pizz having more cheese  falls into oneplace in 2D space
+  pizz having more spice  falls into oneplace in 2D space.
+  
+  this 2D space is called latent space .. we can also call this vectorspace
+  
+  in autoencoder this 2D space is determnistic .. -> it compressed and decompressed specific image or voice or text ..but it cannot generate different
+  versions
+  
+  In Varational Autoencoders this latent space will become latent space of probability distributions
+  so we need mean vector and variance vector to decrypt or regenerate different versions of input
+  why do we need mean?why do we need varaience vectors ? I need your explanatiton here
+  
+  
+What is Latent Space in VAEs?
+Latent space is like a summary zone where complex data (like text, images, or sound) is turned into simple numbers that capture its essence.
+
+Let’s say we describe pizzas by two traits — cheesiness and spiciness — and plot them on a 2D graph. That graph is our latent space.
+
+Example:
+
+[8, 2] → Very cheesy, low spice (maybe a creamy cheese pizza)
+
+[2, 9] → Less cheese, high spice (maybe a spicy pepperoni)
+
+Autoencoders map input (e.g., a specific pizza image) to a fixed point in latent space. You can reconstruct that exact image, but not generate new ones.
+VAEs, instead, map each input to a distribution — a cloud of similar possibilities.
+
+
+So instead of just saying:
+    This pizza = [cheese=7, spice=3]
+They say:
+    This pizza ≈ distribution centered at [7, 3] with some variation
+
+Why do we use Mean and Variance?
+    The mean vector tells us the central idea of the input.
+    The variance vector tells us how much it can vary.
+    By sampling from this distribution, we can generate slightly different versions — that still look, sound, or read like the original.
