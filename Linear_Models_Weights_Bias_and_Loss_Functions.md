@@ -147,5 +147,3 @@ b = b - lr * db  # 20.4
 ```
 
 ---
-
-Let me know if you'd like this exported as a `.md` file or turned into a PDF for easy download!
