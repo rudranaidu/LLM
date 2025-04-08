@@ -1,5 +1,3 @@
-Absolutely! Let's take a deeper look at **Section 3: Flow of Information**, focusing on **activation functions** like **ReLU** and **Sigmoid**, then I’ll provide detailed running notes in Markdown with a suitable name.
-
 ---
 
 ## 🔍 3. Flow of Information – Deep Dive
