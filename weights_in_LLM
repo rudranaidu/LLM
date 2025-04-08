@@ -1,0 +1,26 @@
+Here’s a suggested step-by-step path:
+
+✅ Level 1: Basics
+Understand what weights and biases are in linear regression.
+Learn about loss functions and backpropagation.
+
+✅ Level 2: Neural Networks
+Study multi-layer perceptrons (MLPs)
+See how weights are updated through layers.
+
+✅ Level 3: Word Embeddings
+Understand how text is converted to vectors (word2vec, embedding layers)
+
+✅ Level 4: Transformers
+Learn about attention, queries, keys, values — and their weights
+
+Study how weights are used in self-attention and feedforward layers
+
+✅ Level 5: Training LLMs
+Understand the optimization process
+
+Learn about weight initialization, learning rate, gradient descent, etc.
+
+
+
+
