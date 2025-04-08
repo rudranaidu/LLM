@@ -241,5 +241,3 @@ Y_hat = Z2  # Output
 ```
 
 ---
-
-Let me know if you'd like a PDF export or want to continue with Level 3!
