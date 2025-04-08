@@ -1,5 +1,3 @@
----
-
 ## 🔍 3. Flow of Information – Deep Dive
 
 In a **neural network**, data flows **forward** through layers during prediction. This is called the **forward pass**.
