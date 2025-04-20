@@ -7,3 +7,40 @@ Ensuring faster and more stable training
 🧠 Real-world analogy:
 Imagine you’re training a group of students with different learning speeds. 
 LayerNorm is like giving them personalized coaching, adjusting their pace and energy levels before each class, so no one falls too far behind or gets too far ahead
+
+
+Why we normalize activations using mean and variance:
+During training, the distribution of activations (outputs of neurons) can shift. This is known as internal covariate shift. When each layer’s output (activations) becomes too skewed or irregular, it makes training slower and unstable, especially in deep networks.
+
+👉 So, Layer Normalization makes sure the output of each layer has:
+
+Mean = 0
+
+Variance = 1
+
+This leads to:
+
+Stable gradients
+
+Faster convergence
+
+Better performance in deep models like Transformers
+
+🔢 Simple Example:
+Imagine a mini-batch of token embeddings like:
+
+Token 1 activation: [2.0, 5.0, 10.0]
+Token 2 activation: [3.0, 4.0, 8.0]
+If we don’t normalize, Token 1 has very large values → it could dominate training and gradients. After LayerNorm:
+
+Mean is subtracted: brings values around zero
+
+Divide by standard deviation: ensures values have consistent spread
+
+🧠 Real-World Analogy:
+Imagine you’re grading students from different schools. One school gives scores out of 50, another out of 100.
+
+Without normalization, students from the 100-mark school always look better.
+
+🟡 LayerNorm is like converting all grades to a common scale (like GPA) so that comparison and learning becomes fair.
+
