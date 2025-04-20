@@ -1,0 +1,9 @@
+Layer Normalization (LayerNorm) normalizes the inputs within a layer, ensuring that the mean and variance of the activations remain consistent.
+
+This helps in:
+Preventing unstable gradients
+Ensuring faster and more stable training
+
+🧠 Real-world analogy:
+Imagine you’re training a group of students with different learning speeds. 
+LayerNorm is like giving them personalized coaching, adjusting their pace and energy levels before each class, so no one falls too far behind or gets too far ahead
