@@ -1,0 +1,7 @@
+🎯 Explanation:
+Multi-head attention allows the model to look at the input from multiple "perspectives" or subspaces at once. 
+Each head captures different types of relationships (e.g., local, global, positional).
+
+🧠 Real-world analogy:
+Think of a detective team investigating a crime scene. One looks for fingerprints, another for footprints, 
+another analyzes camera footage. Each finds something different, but together they reconstruct the full picture.
