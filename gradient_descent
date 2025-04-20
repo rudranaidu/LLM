@@ -1,0 +1,29 @@
+During training, the model suffers from the vanishing gradient problem in deeper layers
+
+Vanishing Gradient Problem:
+
+    When training deep neural networks using backpropagation, the gradient (i.e., error signal) becomes very small (or "vanishes") as it is propagated backwards through many layers.
+    This leads to very slow or no learning in early layers.
+    
+Real-world analogy:
+Imagine you're whispering a message through a chain of 20 people. By the time it gets to the first person, the message is inaudible or distorted.
+
+Transformers are deep models built using multi-layered encoder and/or decoder blocks. Each block processes data and passes it forward.
+Because Transformers can go very deep (sometimes 48+ layers!), gradient flow is crucial during backpropagation.
+
+Residual Connections provide shortcuts for gradient flow.
+
+
+Residual Connections:
+Introduced in ResNet (Residual Networks) and adopted in Transformers.
+
+Instead of passing the output of each layer as-is to the next, residual connections add the input to the output of that layer:
+
+Output=Layer(x)+x
+
+This provides a shortcut (or skip connection) for the gradient to flow directly back, avoiding the full depth of the network.
+
+🧠 Why it helps:
+Gradient has a path to flow backwards more easily, without being squashed by many layers.
+
+Think of it like building express lanes in a city — traffic (i.e., gradients) can still flow when regular roads (deep layers) are congested
