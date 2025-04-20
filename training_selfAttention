@@ -1,0 +1,54 @@
+Q) In transformer architectures, what is the primary purpose of the attention mechanism?
+
+A) It allows the model to dynamically focus on different parts of the input sequence when generating each output.
+  The attention mechanism helps the model decide which words are most relevant to the current word being processed.
+  Instead of treating all input words equally, the model assigns a weight to each word — how much attention it should pay to it.
+  For example, in the sentence:
+    "The animal didn't cross the road because it was too tired."
+    What does "it" refer to?
+    Attention helps the model look back at “animal” more than “road.”
+
+Q) What is the primary purpose of Dropout during training of deep learning models?
+   A. It helps the model train faster by skipping layers.
+   B. It prevents the model from learning important features.
+   C. It prevents overfitting by randomly dropping neurons during training.
+   D. It normalizes the outputs of each layer.
+A) answer is C . 
+  
+  Dropout is a regularization technique. During training, it randomly "drops" (sets to zero) a percentage of neurons.
+  This forces the network to not rely too much on any one path — resulting in better generalization to unseen data.
+  After training, all neurons are used — dropout is only for training.
+
+Q) Training Trick — Gradient Clipping
+
+  Why is gradient clipping used in training deep neural networks?
+  A. To reduce the number of neurons in the model.
+  B. To avoid the exploding gradients problem during backpropagation.
+  C. To normalize the input data to a fixed range.
+  D. To convert gradients into probabilities.
+
+  ✅ Correct Answer: B
+
+In deep networks, sometimes gradients become too large during training — causing weights to shoot up and the model to break. 
+This is called the exploding gradients problem.
+Gradient clipping caps the gradients to a fixed maximum — ensuring that updates remain controlled
+
+Real-World Analogy:
+Imagine you’re driving a car down a hill.
+If you don’t apply brakes, you accelerate too fast (exploding gradient).
+Gradient clipping is like setting a speed limit — it prevents your car (model) from losing control.
+
+Q) Why is proper weight initialization important in deep neural networks?
+
+A. To reduce model size
+B. To prevent vanishing/exploding gradients and ensure smooth flow of gradients
+C. To avoid dropout
+D. To enable positional encoding
+
+✅ Correct Answer: B
+
+Explanation:
+If weights are initialized too large or too small, it causes gradients to explode or vanish during training.
+Good initialization (like Xavier or He initialization) ensures:
+Variance of activations remains stable across layers
+Training starts off balanced and faster
