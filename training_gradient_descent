@@ -2,7 +2,8 @@ During training, the model suffers from the vanishing gradient problem in deeper
 
 Vanishing Gradient Problem:
 
-    When training deep neural networks using backpropagation, the gradient (i.e., error signal) becomes very small (or "vanishes") as it is propagated backwards through many layers.
+    When training deep neural networks using backpropagation, the gradient (i.e., error signal) becomes very small (or "vanishes") 
+    as it is propagated backwards through many layers.
     This leads to very slow or no learning in early layers.
     
 Real-world analogy:
