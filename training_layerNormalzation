@@ -10,7 +10,8 @@ LayerNorm is like giving them personalized coaching, adjusting their pace and en
 
 
 Why we normalize activations using mean and variance:
-During training, the distribution of activations (outputs of neurons) can shift. This is known as internal covariate shift. When each layer’s output (activations) becomes too skewed or irregular, it makes training slower and unstable, especially in deep networks.
+During training, the distribution of activations (outputs of neurons) can shift. This is known as internal covariate shift. 
+When each layer’s output (activations) becomes too skewed or irregular, it makes training slower and unstable, especially in deep networks.
 
 👉 So, Layer Normalization makes sure the output of each layer has:
 
