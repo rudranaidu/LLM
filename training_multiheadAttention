@@ -23,9 +23,6 @@ No, RNNs don’t require explicit positional encodings because they process inpu
 🔄 How RNNs Retain Word Order:
 RNNs work like this:
 
-vbnet
-Copy
-Edit
 Input: [I, love, pizza]
 Step 1: RNN processes "I" and updates internal state.
 Step 2: It then takes "love", along with the updated state (which remembers "I").
