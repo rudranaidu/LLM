@@ -1,0 +1,26 @@
+Ever wondered how coding assistants like GitHub Copilot & Cursor actually work under the hood? I recently tore down two leading open-source AI coding assistants — Cline and OpenHands — and their architectural choices reveal everything about their design philosophies. Here’s what I found 👇
+
+🏗️ Core Architecture
+
+Cline: Built as a VS Code extension with a React webview UI. It runs a single conversation loop: the AI receives a request → analyzes context → executes tools → responds → repeats until the task is complete. No fancy event streams—just dynamic context injection into a stateful conversation history.
+
+OpenHands: Multi-agent system with an EventStream backbone and web/headless interface. An AgentController orchestrates agents in an event-driven loop, supporting delegation and hierarchical tasks with persistent state tracking.
+
+🧠 Context Management
+
+Cline’s Secret Sauce: Tracks file edits, terminal output, workspace state, user preferences, and task history. Each AI call is powered by a rich, real-time “snapshot” of your current IDE state—ensuring relevant prompts and contextual awareness without explicit event tracking.
+
+OpenHands’ Edge: Uses ConversationMemory to turn event histories into structured LLM conversations. Smart “Condensers” and LLM summarizers dynamically manage what context to keep, compress, or summarize, balancing context window limits with coherence at scale.
+
+
+🛠️ Tool Execution & State Sampling
+
+Both agents respond with actions (e.g., CmdRun, FileEdit, BrowseURL) → EventStream processes → Runtime executes → Observations feed back into the agent. Function calls are recursive until an AgentFinishAction, mimicking AI devs with full system access.
+
+Cline: Samples state in real time—open files, cursor position, terminal output, linter errors—before every AI call.
+
+OpenHands: Selectively samples and summarizes, preserving key action-observation pairs and essential messages for large-scale workflows.
+
+🚀 Takeaway
+
+Both are more similar than different—core AI → tools → results → repeat loops. The main difference? OpenHands enables multi-agent orchestration and delegation chains, while Cline focuses on solo-agent simplicity. Both nail context and tool execution, but OpenHands is built to scale with teams, while Cline perfects the single-AI dev experience.
