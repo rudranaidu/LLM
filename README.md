@@ -20,3 +20,5 @@ In Terminal, from within the llm_engineering folder, type: jupyter lab
 
 
 ML Foundations : https://www.youtube.com/watch?v=BUTjcAjfMgY&ab_channel=ShawTalebi
+
+NPTL video lectures : https://www.youtube.com/watch?v=ExoluwBk4Xc&list=PLbMVogVj5nJSFZoiF6RDqyz_m6Srjx_MY&index=3&ab_channel=nptelhrd
