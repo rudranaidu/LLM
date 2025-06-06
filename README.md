@@ -17,3 +17,6 @@ Activate the environment: conda activate llms
 
 Start Jupyter Lab:
 In Terminal, from within the llm_engineering folder, type: jupyter lab
+
+
+ML Foundations : https://www.youtube.com/watch?v=BUTjcAjfMgY&ab_channel=ShawTalebi
