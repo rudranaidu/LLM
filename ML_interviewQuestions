@@ -17,7 +17,18 @@ A VAE is a type of autoencoder that learns to  encode data into a latent space a
 back to the original data space, with added  probabilistic elements to allow for more robust  data generation. 
 It mainly uses in Diffustion models for compression and decompression.
 
+The GPT (Generative Pre-trained Transformer)  model is a type of Transformer model developed  by OpenAI, designed to
+generate coherent and  contextually relevant text by pre-training on a  large corpus of text data. 
 
+GPT-3 is an improved version of GPT-2 with  significantly more parameters (175 billion vs. 1.5  billion),
+leading to better performance in  generating more accurate and contextually  relevant text. 
+
+GPT-4 is 1.76 trillion parameters. Open AI officially didnt disclose it
+
+GPT-5 is 80 trillion parameters.
+
+Bias can be mitigated by using diverse and  representative training data, implementing  fairness constraints, 
+and continuously monitoring  and updating models to reduce biased outputs. 
 
 
 
