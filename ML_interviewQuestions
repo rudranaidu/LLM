@@ -30,5 +30,52 @@ GPT-5 is 80 trillion parameters.
 Bias can be mitigated by using diverse and  representative training data, implementing  fairness constraints, 
 and continuously monitoring  and updating models to reduce biased outputs. 
 
+The latent space is an abstract space where  generative models, like VAEs and GANs, map input  data to a compressed representation. 
+This space  allows for the generation of new data by sampling from it and decoding it back into the original data  domain.
+
+How to validate Correctness of text generation. Following are different techniques
+
+| **Metric**     | **What it Measures**                   | **When to Use**            | **Limitations**                                    |
+| -------------- | -------------------------------------- | -------------------------- | -------------------------------------------------- |
+|   BLEU         | n-gram overlap with reference          | Translation, summarization | Ignores meaning, just word overlap                 |
+|   ROUGE        | Overlap of recall-oriented n-grams     | Summarization              | Doesn’t check factual correctness                  |
+|   METEOR       | Like BLEU but considers synonyms       | Translation                | Still reference-based                              |
+|  BERTScore     | Semantic similarity using embeddings   | General text generation    | Needs reference text                               |
+|  Perplexity    | How well model predicts the next token | Language modeling          | Lower is better, but doesn’t ensure quality output |
+|  Distinct-n    | Diversity of n-grams                   | Chatbots, story gen        | Doesn’t check relevance                            |
+
+
+How to validate correctness of Image generation:
+The Inception Score is a metric used to evaluate  the quality of generated images by assessing 
+how  closely the generated images resemble real  images and the diversity of the generated set. 
+
+BERT VS GPT
+
+BERT (Bidirectional Encoder Representations from  Transformers) is a transformer model designed  for understanding and context in text,
+using  bidirectional attention. GPT is focused on text  generation using unidirectional attention. 
+
+SelfAttention:
+Self-attention allows each token in the input  sequence to focus on different parts of the  sequence, 
+enabling the model to capture  dependencies and relationships between tokens,  regardless of their distance from each other. 
+
+FineTuning:
+Fine-tuning involves taking a pre-trained language  model and training it further on a specific task or  
+dataset to adapt it to particular requirements,  enhancing its performance on that task. 
+
+Transfer Learning:
+Transfer learning in generative models involves  pre-training on a large corpus of data to learn  general language patterns,
+followed by fine-tuning  on a specific task or domain to improve  performance and relevance.
+
+Reinforcement Learning:
+Rewarding desirable outcomes and penalizing  undesirable ones, guiding the model to improve its  performance iteratively. 
+
+Long Short-Term Memory (LSTM) is a recurrent neural networks (RNNs) that can capture  
+long-term dependencies and are commonly used in text generation tasks to handle sequential data.
+
+
+
+
+
+
 
 
