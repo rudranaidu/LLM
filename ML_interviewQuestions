@@ -1,1 +1,20 @@
 https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers?tab=readme-ov-file
+
+
+Generative Adversial Network(GAN):
+GAN is a class of machine learning frameworks  where two neural networks, the generator and the  discriminator,
+contest with each other. The  generator creates fake data, while the  discriminator tries to distinguish it from real data. 
+
+GANs were the dominant method for generating realistic images before diffusion models became popular.
+After diffusion models arrived (around 2020–2021), they largely replaced GANs in high-end image generation
+because they are more stable, scalable, and controllable — but GANs are still used in some niche areas like 
+image-to-image translation, super-resolution, and cases where speed matters more than flexibility.
+
+Variational Auto Encoder (VAE):
+A VAE is a type of autoencoder that learns to  encode data into a latent space and then decode it  
+back to the original data space, with added  probabilistic elements to allow for more robust  data generation. 
+It mainly uses in Diffustion models for compression and decompression.
+
+
+
+
