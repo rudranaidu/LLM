@@ -1,6 +1,7 @@
 Understanding Transformer Architecture in Simple Terms
 The transformer architecture is a foundational building block for modern Large Language Models (LLMs) such as GPT and LLaMA. 
-It revolutionized natural language processing by introducing mechanisms like multi-head attention and positional encoding. Here's an explanation based on the provided notes:
+It revolutionized natural language processing by introducing mechanisms like multi-head attention and positional encoding.
+Here's an explanation based on the provided notes:
 
 Transformers: Encoders + Decoders
 The transformer model consists of two main components:
