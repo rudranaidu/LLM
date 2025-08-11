@@ -108,6 +108,7 @@ Why Transformers Are Better than LSTMs(Long Short-Term Memory networks)
 Parallelization: Transformers process input sequences simultaneously, unlike LSTMs, which process sequentially. This makes them faster and more scalable.
 Contextual Understanding: Transformers use attention mechanisms to focus on relevant parts of the input, providing a richer context than LSTMs.
 Positional Embedding: LSTMs rely on inherent sequence processing, but transformers explicitly encode positional information, improving flexibility.
+
 In summary, the transformer architecture is a blend of contextual embedding, positional encoding, multi-head attention, 
 and deep layers, making it powerful for tasks like text generation and understanding.
 
@@ -115,3 +116,8 @@ and deep layers, making it powerful for tasks like text generation and understan
 What Are LSTMs?
 LSTMs (Long Short-Term Memory networks) are a type of artificial neural network, specifically a variant of Recurrent Neural Networks (RNNs). 
 They are designed to handle sequential data, such as time series, speech, and text, where the order of information is crucial
+
+
+Weights and attention mechanism:
+In LLMs, the trainable parameters are like a chef’s recipe book, but the attention mechanism is the chef dynamically deciding,
+for each dish (input), how much of each ingredient (token) to use — those proportions are the attention weights.
