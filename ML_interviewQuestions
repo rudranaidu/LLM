@@ -91,6 +91,20 @@ Recurrent Generative VS FeedForward Generative Models:
 Recurrent generative models, such as RNN-based  VAEs, generate data sequentially, maintaining a  hidden state that captures dependencies over  time.
 Feedforward generative models, like GANs,  generate data in a single pass without temporal  dependencies. 
 
+HyperParameters:
+Hyperparameters are adjustable parameters in a  machine learning model or algorithm that govern  the learning process.  
+Unlike model parameters, which are learned from  the data, hyperparameters are set before the  training process begins and control aspects 
+like  the learning rate, the number of layers in a neural  network, or the number of trees in a random  forest.  
+Fine-tuning hyperparameters can significantly  impact the model's performance.
+
+Learning Rate:  Controls the step size during gradient descent.  
+Batch Size:  Number of training samples used in one iteration.  
+Epochs:  Number of complete passes through the training  dataset.  
+Number of Layers:  In neural networks, determines the depth of the  model.  
+Number of Neurons:  The number of neurons in each layer of a neural  network.  
+Dropout Rate:  The fraction of neurons to drop during training to prevent overfitting.
+
+
 
 
 
