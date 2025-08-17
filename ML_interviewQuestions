@@ -72,6 +72,27 @@ Rewarding desirable outcomes and penalizing  undesirable ones, guiding the model
 Long Short-Term Memory (LSTM) is a recurrent neural networks (RNNs) that can capture  
 long-term dependencies and are commonly used in text generation tasks to handle sequential data.
 
+Human feedback can be integrated using  techniques like reinforcement learning with  human feedback (RLHF), 
+where human evaluators  provide feedback on generated content, guiding  the model to improve its outputs iteratively. 
+
+The T5 (Text-To-Text Transfer Transformer) model  treats all NLP tasks as a text-to-text problem, converting  inputs to text and generating text outputs,
+enabling it  to handle various tasks with a unified architecture. 
+
+Positional encoding captures Order and relationships of tokens
+
+Overfitting can be prevented using techniques  such as regularization (e.g., dropout, weight  decay),
+early stopping, data augmentation, and  ensuring a diverse and representative training  dataset. 
+
+Adversarial training involves training a model with  adversarial examples, which are deliberately  perturbed inputs designed to deceive the model. 
+For generative models, it can enhance robustness  by improving their ability to handle variations and  adversarial attacks. 
+
+Recurrent Generative VS FeedForward Generative Models:
+
+Recurrent generative models, such as RNN-based  VAEs, generate data sequentially, maintaining a  hidden state that captures dependencies over  time.
+Feedforward generative models, like GANs,  generate data in a single pass without temporal  dependencies. 
+
+
+
 
 
 
