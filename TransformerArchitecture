@@ -27,10 +27,11 @@ Vector dimensions determine the complexity of word representations:
 
 Early models like word2vec (introduced by Google in 2013) used 512 dimensions.
 GPT-3, a much larger model, operates with over 12,288 dimensions.
+
 Positional Encoding (PE)
 Transformers use Positional Encoding to understand the order of words in a sentence. Since the model itself doesn't 
-have a natural sense of sequence, positional information is added to the token vectors. This is done using sine and cosine waves to create a unique positional vector,
-which is distinct from the embedding vector.
+have a natural sense of sequence, positional information is added to the token vectors. 
+This is done using sine and cosine waves to create a unique positional vector, which is distinct from the embedding vector.
 
 Context Embedding (CE)
 Understanding the context of a word is crucial for correct meaning:
@@ -42,7 +43,8 @@ The context embedding ensures that the vector representation adapts to the surro
 
 The Attention Mechanism
 The heart of the transformer is the attention mechanism, which assigns importance to different words in the input based on their relevance.
-The Multi-Head Attention (MHA) mechanism allows the model to focus on multiple parts of the input simultaneously. Each layer of the model has the following key components:
+The Multi-Head Attention (MHA) mechanism allows the model to focus on multiple parts of the input simultaneously. 
+Each layer of the model has the following key components:
 
 Feedforward Network
 Multi-Head Attention
